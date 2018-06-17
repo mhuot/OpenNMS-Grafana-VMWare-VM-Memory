@@ -60,7 +60,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1529243455752,
+  "iteration": 1529244066961,
   "links": [],
   "panels": [
     {
@@ -1061,7 +1061,7 @@
         "multi": true,
         "name": "node",
         "options": [],
-        "query": "select nodelabel  AS __text, foreignsource || ':' || foreignid AS __value from node where nodeid in (select nodeid from assets where  vmwaretopologyinfo ~ 'host-[0-9]*/$Host');",
+        "query": "select nodelabel  AS __text, foreignsource || ':' || foreignid AS __value from node where nodeid in (select nodeid from assets where  vmwaretopologyinfo ~ 'host-[0-9]*/$Host' and vmwarestate='poweredOn');",
         "refresh": 1,
         "regex": "",
         "sort": 0,
@@ -1105,5 +1105,5 @@
   "timezone": "",
   "title": "VMWare VM Memory",
   "uid": "_LJ1yDNik",
-  "version": 8
+  "version": 10
 }
